@@ -8,4 +8,26 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="NoTitleTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <!--是否隐藏状态栏-->
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@color/colorwhite</item>
+        <item name="android:background">@null</item>
+        <!--<item name="android:windowIsTranslucent">true</item>-->
+    </style>
+
+    <!--登陆-->
+    <style name="LoadPage_Linaerly_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <style name="View_Line_horizontal">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">#ffffff</item>
+        <item name="android:layout_marginTop">8dp</item>
+    </style>
 </resources>
