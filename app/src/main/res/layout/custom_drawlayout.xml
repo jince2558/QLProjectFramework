@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/custon_drawlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ecf4ff"
+            android:gravity="center"
+            android:padding="15dp"
+            android:text="-------截止至2017年6月6日-------"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/mainactivity_slideView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#ecf4ff"
+            android:gravity="center"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:paddingLeft="3dp"
+            android:paddingRight="5dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                style="@style/MainPageLayoutForText"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <TextView
+                    style="@style/MainPageText"
+                    android:gravity="center"
+                    android:text="全市农村污水\n处理设施共"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp" />
+
+                <TextView
+                    style="@style/MainPageText"
+                    android:layout_marginTop="15dp"
+                    android:text="——"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="15sp" />
+
+                <TextView
+                    style="@style/MainPageText"
+                    android:text="万/m3"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:background="#ecf4ff"
+                android:orientation="vertical"
+                android:paddingBottom="2dp"
+                android:paddingLeft="1dp"
+                android:paddingRight="2dp">
+
+                <LinearLayout style="@style/MainPageLayoutForText">
+
+                    <TextView
+                        style="@style/MainPageText"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="5dp"
+                        android:text="农村污水污水处理总量"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        style="@style/MainPageText"
+                        android:text="——"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        style="@style/MainPageText"
+                        android:text="m3"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+
+                <LinearLayout style="@style/MainPageLayoutForText">
+
+                    <TextView
+
+                        style="@style/MainPageText"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="5dp"
+                        android:text="设计处理量"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        style="@style/MainPageText"
+                        android:layout_marginRight="2dp"
+                        android:text="——"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        style="@style/MainPageText"
+                        android:text="m3/日"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+
+                <LinearLayout style="@style/MainPageLayoutForText">
+
+                    <TextView
+                        style="@style/MainPageText"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="5dp"
+                        android:text="实际处理量"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        style="@style/MainPageText"
+                        android:text="——"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        style="@style/MainPageText"
+                        android:text="m3/日"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@mipmap/index_bg"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/homepage_titlecotnet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/nav_bg"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/colorwhite"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                style="@style/MainPageLayoutForText"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="#f25f4f"
+                    android:textSize="15sp"
+                    />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:src="@mipmap/ic_launcher" />
+
+                <LinearLayout
+                    style="@style/MainPageLayoutForTextContent"
+                    android:layout_width="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/homepage_sum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="——"
+                        android:textColor="#f25f4f"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="万m³"
+                        android:textColor="#f25f4f"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="m3"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            style="@style/MainPageText"
+                            android:gravity="center"
+                            android:text=""
+                            android:textSize="12sp" />
+
+                        <LinearLayout style="@style/MainPageLayoutForTextContent">
+
+                            <TextView
+                                android:id="@+id/homepage_facilities"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="——"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="座"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View style="@style/View_Line_vertical" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="5dp"
+                            android:text=""
+                            android:textSize="12sp" />
+
+                        <LinearLayout style="@style/MainPageLayoutForTextContent">
+
+                            <TextView
+                                android:id="@+id/homepage_design"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="2dp"
+                                android:text="——"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="万m³/日"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="m3/日"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <View style="@style/View_Line_vertical" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingBottom="10dp">
+
+                        <TextView
+                            style="@style/MainPageText"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginRight="5dp"
+                            android:text="--"
+                            android:textSize="12sp" />
+
+                        <LinearLayout style="@style/MainPageLayoutForTextContent">
+
+                            <TextView
+                                android:id="@+id/homepage_actual"
+                                style="@style/MainPageText"
+                                android:text="——"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="15sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="万m³"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+
+
+                        <TextView
+                            style="@style/MainPageText"
+                            android:text="m3/日"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/colorbordercolor" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/mainactivity_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+
+    <!-- 侧滑菜单 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:background="#F5F5F5"
+        android:orientation="vertical">
+
+        <ListView
+            android:id="@+id/lv_left_menu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:visibility="gone"/>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/lv_left_menurecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone" />
+
+        <!--===============================================================================-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+        <LinearLayout
+            android:id="@+id/custominfo_changepassword"
+            style="@style/customerinfo_layout">
+
+            <TextView
+                style="@style/customerinfo_text"
+                android:text="修改密码" />
+
+            <ImageView style="@style/customerinfo_img" />
+        </LinearLayout>
+        <View style="@style/View_Line_horizontal_n" />
+
+        <LinearLayout
+            android:id="@+id/custominfo_updateversion"
+            style="@style/customerinfo_layout">
+
+            <TextView
+                style="@style/customerinfo_text"
+                android:text="版本更新" />
+
+            <ImageView
+                android:id="@+id/new_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/newimg"
+                android:visibility="gone"/>
+
+            <ImageView style="@style/customerinfo_img" />
+        </LinearLayout>
+        <View style="@style/View_Line_horizontal_n" />
+
+        <LinearLayout
+            android:id="@+id/custominfo_myinfo"
+
+            style="@style/customerinfo_layout">
+
+            <TextView
+                style="@style/customerinfo_text"
+                android:text="我的消息" />
+
+            <ImageView style="@style/customerinfo_img" />
+        </LinearLayout>
+        <View style="@style/View_Line_horizontal_n" />
+
+        <LinearLayout
+            android:id="@+id/custominfo_cancellation"
+            style="@style/customerinfo_layout">
+
+            <TextView
+                style="@style/customerinfo_text"
+                android:text="注销" />
+
+            <ImageView style="@style/customerinfo_img" />
+        </LinearLayout>
+        <View style="@style/View_Line_horizontal_n" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="当前版本号:v 1.0.7" />
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>

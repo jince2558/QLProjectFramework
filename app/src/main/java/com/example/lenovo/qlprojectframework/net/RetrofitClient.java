@@ -14,7 +14,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitClient {
     private NetWorkService ser;
     private static RetrofitClient retrofitClient;
-    private String baseURL = "http://192.168.100.113:8010/Bjnwsys_App/router?v=1.0&method=bjnk.system.";
+    private String baseURL = "http://210.73.87.74:8997/bjnkprovider/";
 
 
     public static RetrofitClient getIntent() {
@@ -25,12 +25,11 @@ public class RetrofitClient {
                 }
             }
         }
-
         return retrofitClient;
     }
 
     public NetWorkService getService() {
-        Retrofit Retrofit = new Retrofit.Builder()
+        Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(baseURL)
                 //支持gson解析器
                 .addConverterFactory(GsonConverterFactory.create())
@@ -38,7 +37,7 @@ public class RetrofitClient {
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
                 .build();
 
-        ser = Retrofit.create(NetWorkService.class);
+        ser = retrofit.create(NetWorkService.class);
         return ser;
     }
 

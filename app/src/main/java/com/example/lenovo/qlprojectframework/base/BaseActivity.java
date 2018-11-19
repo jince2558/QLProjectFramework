@@ -1,5 +1,6 @@
 package com.example.lenovo.qlprojectframework.base;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -40,5 +41,9 @@ public abstract class BaseActivity extends AppCompatActivity {
      * 初始化数据
      */
     protected abstract void initData();
+
+    public void startActivity(Class<?> cls){
+        new Intent(this,cls);
+    }
 
 }

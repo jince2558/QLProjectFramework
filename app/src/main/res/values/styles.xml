@@ -30,4 +30,65 @@
         <item name="android:background">#ffffff</item>
         <item name="android:layout_marginTop">8dp</item>
     </style>
+
+
+    <!-- 主页外层LinearLayout-->
+    <style name="MainPageLayoutForText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_weight">1</item>
+        <!--<item name="android:gravity">center_vertical</item>-->
+        <!--<item name="android:background">@color/colorwhite</item>-->
+        <item name="android:layout_margin">2dp</item>
+    </style>
+
+    <style name="MainPageLayoutForTextContent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <style name="MainPageText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+    </style>
+    <style name="View_Line_vertical">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/colorbordercolor</item>
+    </style>
+    <style name="customerinfo_layout">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:onClick">LayoutOnClick</item>
+    </style>
+
+    <style name="customerinfo_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginLeft">15dp</item>
+    </style>
+
+    <style name="customerinfo_img">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:src">@mipmap/icon_right_two</item>
+    </style>
+    <style name="View_Line_horizontal_n">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">1dp</item>
+        <item name="android:background">@color/colorbordercolor</item>
+    </style>
+    <!--登录输入框浮动标签-->
+    <style name="login_hintAppearance">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/colorPrimary</item>
+    </style>
 </resources>
