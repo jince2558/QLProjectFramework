@@ -1,19 +1,15 @@
 package com.example.lenovo.qlprojectframework.contract;
 
 import com.example.lenovo.qlprojectframework.base.BaseView;
-import com.example.lenovo.qlprojectframework.bean.MainBean;
+import com.example.lenovo.qlprojectframework.bean.LoginBean;
 
 import io.reactivex.Observable;
 
-/**
- * @author LMK
- * @create 2018/11/22
- * @Describe
- */
-public interface MainContract {
-    interface MainModel {
-        Observable<MainBean> mainRequest();
+public interface LoginContract {
+    interface LoginModel {
+        Observable<LoginBean> login(String userName, String passWord);
     }
+
     interface View extends BaseView {
         @Override
         void showLoading();
@@ -24,11 +20,11 @@ public interface MainContract {
         @Override
         void onError(Throwable throwable);
 
-        void onSuccess(MainBean O);
+        void onSuccess(Object o);
     }
 
     interface Presenter {
-        void mainRequest();
+        void login(String userName, String passWord);
     }
 
 }

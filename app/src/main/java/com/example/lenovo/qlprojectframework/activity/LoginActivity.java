@@ -12,13 +12,13 @@ import com.example.lenovo.qlprojectframework.MainActivity;
 import com.example.lenovo.qlprojectframework.R;
 import com.example.lenovo.qlprojectframework.base.BaseActivity;
 import com.example.lenovo.qlprojectframework.bean.LoginBean;
-import com.example.lenovo.qlprojectframework.contract.MainContract;
-import com.example.lenovo.qlprojectframework.presenter.MainPresenter;
+import com.example.lenovo.qlprojectframework.contract.LoginContract;
+import com.example.lenovo.qlprojectframework.presenter.LoginPresenter;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class LoginActivity extends BaseActivity implements View.OnClickListener, MainContract.View {
+public class LoginActivity extends BaseActivity implements View.OnClickListener, LoginContract.View {
     private static final String TAG = LoginActivity.class.getSimpleName();
     @BindView(R.id.load_user)
     EditText mUserNameEdit;
@@ -28,7 +28,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
     CheckBox mCheckBox;
     Button mLoginBtn;
 
-    private MainPresenter presenter;
+    private LoginPresenter presenter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -49,7 +49,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener,
 
     @Override
     protected void initData() {
-        presenter = new MainPresenter();
+        presenter = new LoginPresenter();
         presenter.attach(this);
     }
 

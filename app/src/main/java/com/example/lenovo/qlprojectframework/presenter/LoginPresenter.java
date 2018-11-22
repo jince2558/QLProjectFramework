@@ -3,33 +3,29 @@ package com.example.lenovo.qlprojectframework.presenter;
 
 import com.example.lenovo.qlprojectframework.base.BasePresenter;
 import com.example.lenovo.qlprojectframework.bean.LoginBean;
-import com.example.lenovo.qlprojectframework.bean.MainBean;
 import com.example.lenovo.qlprojectframework.contract.LoginContract;
-import com.example.lenovo.qlprojectframework.contract.MainContract;
 import com.example.lenovo.qlprojectframework.model.LoginModel;
-import com.example.lenovo.qlprojectframework.model.MainModel;
-
 import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.functions.Consumer;
 import io.reactivex.schedulers.Schedulers;
 
-public class MainPresenter extends BasePresenter<MainContract.View> implements MainContract.Presenter {
-    MainModel model;
+public class LoginPresenter extends BasePresenter<LoginContract.View> implements LoginContract.Presenter {
+    private LoginModel model;
 
-    public MainPresenter() {
-        model = new MainModel();
+    public LoginPresenter() {
+        model = new LoginModel();
     }
 
     @Override
-    public void mainRequest() {
+    public void login(String userName, String passWord) {
         mView.showLoading();
-        model.mainRequest()
+        model.login(userName, passWord)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Consumer<MainBean>() {
+                .subscribe(new Consumer<LoginBean>() {
                     @Override
-                    public void accept(MainBean o) throws Exception {
-                        mView.onSuccess(o);
+                    public void accept(LoginBean loginBean) throws Exception {
+                        mView.onSuccess(loginBean);
                         mView.hideLoading();
                     }
                 }, new Consumer<Throwable>() {
@@ -38,6 +34,7 @@ public class MainPresenter extends BasePresenter<MainContract.View> implements M
                         mView.onError(throwable);
                     }
                 });
-
     }
+
+
 }

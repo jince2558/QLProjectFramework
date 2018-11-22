@@ -1,13 +1,19 @@
 package com.example.lenovo.qlprojectframework;
 
 import android.os.Bundle;
+import android.util.Log;
+
 import com.example.lenovo.qlprojectframework.base.BaseActivity;
+import com.example.lenovo.qlprojectframework.bean.MainBean;
 import com.example.lenovo.qlprojectframework.bean.TestBean;
+import com.example.lenovo.qlprojectframework.contract.MainContract;
 import com.example.lenovo.qlprojectframework.net.GetOkHttpData;
+import com.example.lenovo.qlprojectframework.presenter.MainPresenter;
 import com.example.lenovo.qlprojectframework.utils.NetToo;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity implements MainContract.View {
     private static final String TAG = MainActivity.class.getSimpleName();
+    private MainPresenter presenter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,12 +32,27 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void initData() {
-        NetToo.getInstance().startRequest(this, "http://210.73.87.74:8997/bjnkprovider/router?v=1.0&method=bjnk.system.home", new GetOkHttpData() {
-            @Override
-            public void getOkHttpData(String data, Object o) {
-            }
-        }, TestBean.class);
+        presenter = new MainPresenter();
+        presenter.attach(this);
+        presenter.mainRequest();
     }
 
+    @Override
+    public void showLoading() {
+
+    }
+
+    @Override
+    public void hideLoading() {
+
+    }
+    @Override
+    public void onError(Throwable throwable) {
+
+    }
+    @Override
+    public void onSuccess(MainBean O) {
+        Log.e("结果 ", " === " + O.getData().getDate());
+    }
 
 }
